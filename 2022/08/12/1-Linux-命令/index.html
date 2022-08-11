@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>1.Linux 命令 | hac_empo&#39;s algorithm</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="常用命令 日期  date clock cal uptime  文件  显示当前目录和当前目录下文件  pwd 打印当前工作目录 ls -a(ll)l(ist)、ll 显示当前工作目录下的文件   切换目录  cd 切换目录   创建目录和创建文件·  mkdir 新建目录 touch 新建一个文件、查看文件修改信息   删除、移动和复制  rm -r(emove)f(orce) 删除一个文件 r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.Linux 命令">
+<meta property="og:url" content="http://example.com/2022/08/12/1-Linux-%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="hac_empo&#39;s algorithm">
+<meta property="og:description" content="常用命令 日期  date clock cal uptime  文件  显示当前目录和当前目录下文件  pwd 打印当前工作目录 ls -a(ll)l(ist)、ll 显示当前工作目录下的文件   切换目录  cd 切换目录   创建目录和创建文件·  mkdir 新建目录 touch 新建一个文件、查看文件修改信息   删除、移动和复制  rm -r(emove)f(orce) 删除一个文件 r">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-08-11T22:57:38.000Z">
+<meta property="article:modified_time" content="2022-08-11T22:59:27.825Z">
+<meta property="article:author" content="hac empo">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="hac_empo&#39;s algorithm" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">hac empo</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1840192925&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">I&#39;m a developer.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-1-Linux-命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/08/12/1-Linux-%E5%91%BD%E4%BB%A4/" class="article-date">
+  	<time datetime="2022-08-11T22:57:38.000Z" itemprop="datePublished">2022-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      1.Linux 命令
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p> 日期</p>
+<ul>
+<li>date</li>
+<li>clock</li>
+<li>cal</li>
+<li>uptime</li>
+</ul>
+<p>文件</p>
+<ul>
+<li><p>显示当前目录和当前目录下文件</p>
+<ul>
+<li>pwd 打印当前工作目录</li>
+<li>ls -a(ll)l(ist)、ll 显示当前工作目录下的文件</li>
+</ul>
+</li>
+<li><p>切换目录</p>
+<ul>
+<li>cd 切换目录</li>
+</ul>
+</li>
+<li><p>创建目录和创建文件·</p>
+<ul>
+<li>mkdir 新建目录</li>
+<li>touch 新建一个文件、查看文件修改信息</li>
+</ul>
+</li>
+<li><p>删除、移动和复制</p>
+<ul>
+<li>rm -r(emove)f(orce) 删除一个文件</li>
+<li>rmdir 删除目录</li>
+<li>mv 移动文件，重命名文件</li>
+<li>cp 复制文件</li>
+</ul>
+</li>
+<li><p>权限管理</p>
+<ul>
+<li>chmod u+x or 775 更改文件权限 ugo权限</li>
+<li>chown 更改文件所属者</li>
+<li>chgrp 更改文件所属组</li>
+</ul>
+</li>
+<li><ul>
+<li>srwx</li>
+<li>umask</li>
+<li>df</li>
+</ul>
+</li>
+<li><p>显示信息</p>
+<ul>
+<li><p>shell 编写shell脚本</p>
+</li>
+<li><p>vim 文件编辑器</p>
+</li>
+<li><p>cat 显示文本文件</p>
+</li>
+<li><p>nl 显示文本文件</p>
+</li>
+<li><p>more </p>
+</li>
+<li><p>less</p>
+</li>
+<li><p>head 从前往后显示</p>
+</li>
+<li><p>tail -n 从后往前显示，显示行数</p>
+</li>
+</ul>
+</li>
+<li><p>查找</p>
+<ul>
+<li>which 查看文件路径</li>
+<li>whereis</li>
+<li>locate</li>
+<li>find -time… 、-name 查找包</li>
+</ul>
+</li>
+<li><p>压缩</p>
+<ul>
+<li>zip</li>
+<li>unzip</li>
+<li>gzip</li>
+<li>tar -c or z(ip)xvf 解压</li>
+</ul>
+</li>
+</ul>
+<p>系统设备</p>
+<ul>
+<li><p>查看系统信息</p>
+<ul>
+<li>sh</li>
+<li>cat &#x2F;etc&#x2F;redhat-release</li>
+<li>unam -a 查看系统内核版本</li>
+<li>df -hT、-lh 查看磁盘空间情况</li>
+<li>du 查看当前占用空间</li>
+<li>ps aux、-ef是否有进程、-ef|grep筛选相应进程</li>
+<li>kill 杀死进程</li>
+<li>top 查看相应服务是否启动</li>
+<li>free -m 查看内存情况</li>
+<li>echo 1 or 2 or 3 &gt; &#x2F;proc&#x2F;sys&#x2F;vm&#x2F;drop_caches 清除缓存</li>
+<li>vmstat</li>
+<li>iostat</li>
+<li>lsof</li>
+</ul>
+</li>
+<li><p>开关机</p>
+<ul>
+<li>shutdown -rh now 立即关机、time 准确时间[20:00],限时[10 min]</li>
+<li>reboot 重启</li>
+<li>poweroff 关机</li>
+<li>init 0 or 6 系统的启动级别</li>
+</ul>
+</li>
+</ul>
+<p>网络</p>
+<ul>
+<li><ul>
+<li>ip -a 查看网卡信息</li>
+<li>ifconfig -a 网络设备信息</li>
+<li>ifup 启用网卡</li>
+<li>ifdown 关闭网卡</li>
+<li>netstat -tupln、-ntlp查看占用端口</li>
+<li>cul 访问相应端口</li>
+<li>telstat</li>
+<li>dig</li>
+<li>route</li>
+<li>trace</li>
+<li>ping 测试网络连接</li>
+<li>nmcli con sh or connection reload 网络管理工具，重启网卡</li>
+<li>nmtui nmcli网络管理工具的图形化界面工具</li>
+<li>ssh 远程连接服务器</li>
+<li>git 从GitHub拉取项目代码</li>
+<li>wget 获取网络地址上的文件压缩包</li>
+<li>sz 下载文件到本地</li>
+</ul>
+</li>
+</ul>
+<p>其他</p>
+<ul>
+<li><ul>
+<li>ln 与目标文件产生链接</li>
+<li>diff 比较两个文件的不同</li>
+<li>grep 筛选字符串</li>
+<li>wc</li>
+<li>watch</li>
+</ul>
+</li>
+<li><p>计划任务</p>
+<ul>
+<li>at 在某一时刻执行设置好的命令</li>
+<li>crontab 在某些时间段执行设置好的命令 时间可以用确切的，也可以用虚指的，比如morning</li>
+<li>nohup &amp;后台启动</li>
+<li>jobs 任务查询</li>
+</ul>
+</li>
+<li><p>包管理工具(安装软件)</p>
+<ul>
+<li>yum -y这样就不用输入y了</li>
+<li>dnf yum这种包管理工具的升级版</li>
+<li>apt(ubuntu使用)</li>
+<li>–version 查看版本</li>
+</ul>
+</li>
+<li><p>帮助</p>
+<ul>
+<li>–help 获取某个命令的帮助</li>
+<li>man 一个命令手册可以查到详细的命令使用方式和作用</li>
+<li>info 查看详细的命令</li>
+<li>yum provides 查看哪些软件提供这种服务</li>
+</ul>
+</li>
+<li><p>操作 </p>
+<ul>
+<li>history -c、Ctrl+r 查看历史命令</li>
+<li>！！</li>
+<li>！command</li>
+<li>！num</li>
+<li>！？command</li>
+<li>[1..3]</li>
+</ul>
+</li>
+</ul>
+<p>用户</p>
+<ul>
+<li>查看用户<ul>
+<li>id 显示用户id</li>
+<li>who 显示用户账户</li>
+<li>w who的缩写</li>
+</ul>
+</li>
+<li>切换用户，切换用户做什么<ul>
+<li>shadow</li>
+<li>su - （username）切换某个账户，低权限账户转高权限账户需要输入密码，反之不需要</li>
+<li>sudo 获得root权限执行命令</li>
+</ul>
+</li>
+<li>增删改，设置和修改密码<ul>
+<li>useradd 创建一个新的用户</li>
+<li>userdel -r 删除用户 ，没有参数r容易删不干净</li>
+<li>usermod 修改用户信息</li>
+<li>groupadd 在一个组中新增新用户</li>
+<li>passwd 设置密码或者修改某个用户的密码</li>
+</ul>
+</li>
+<li>睡眠注销<ul>
+<li>sleep 睡眠</li>
+<li>logout 注销</li>
+<li>exit 注销，推出账户</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/12/2-Linux-%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          2.Linux 快捷键
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/08/09/3-%E5%9B%BE%E8%AE%BA-%E2%85%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">3.图论 Ⅰ</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2022 hac empo
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
